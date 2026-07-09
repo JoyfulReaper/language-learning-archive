@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bouncy Ball</title>
+    <style>
+      .ball {
+        position: relative;
+        left: 75%;
+        background-color: #ffb33a;
+        width: 20rem; 
+        height: 20rem;
+        border-radius: 10rem; 
+        animation: bounce 3s;
+        animation-timing-function: cubic-bezier(0, 0, 0.5, 1.5);
+      }
+      @keyframes bounce {
+        0% {
+          left: 0%; 
+        }
+        100% {
+          left: 75%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+  </body>
+</html>

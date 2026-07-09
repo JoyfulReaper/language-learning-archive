@@ -1,0 +1,17 @@
+/* ######## mobile specific styles ######## */
+/* headlines */
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+
+/* navigation bar */
+nav { width: 100%; background-color: #000; color: #fbd91f; }
+nav ul { padding-top: 0.15em; padding-bottom: 0.15em; }
+nav ul li { margin: 0 0 0.5em 0.2em; }
+
+/* article */
+article { width: 100%; padding: 0.25em; }
+article img { width: 100%; height: auto; }
+
+/* aside */ 
+aside { width: 100%; }
+aside img { width: 100%; height: auto; }

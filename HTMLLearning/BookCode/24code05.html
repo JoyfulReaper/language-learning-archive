@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Create a New Window</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Create a New Window</h1>
+    <p>
+      Use the buttons below to open and close windows using 
+      JavaScript.
+    </p>
+    <button type="button" id="openNew">Open New Window</button>
+
+    <button type="button" id="closeNew">Close New Window</button>
+
+    <button type="button" id="closeSelf">Close Main Window</button>
+
+    <script>
+      document.getElementById("openNew").addEventListener("click", 
+      function() {
+        newWin = window.open("", "NewWin", 
+                      "toolbar=no,status=no,width=200,height=100");
+      });
+      
+      document.getElementById("closeNew").addEventListener("click", 
+      function() {
+        newWin.close();
+      });
+      
+      document.getElementById("closeSelf").addEventListener("click", 
+      function() {
+        window.self.close();
+      });
+    </script>
+
+  </body>
+</html>

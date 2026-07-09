@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Displaying Keypresses</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Displaying Typed Characters</h1>
+    <p>
+      This document includes a simple script that displays the keys 
+      you type as a new paragraph below. Type a few keys to try it.
+    </p>
+    <p id="keys"></p>
+
+    <script>
+    function displayKey(e) {
+       // which key was pressed?
+       var keycode=e.which;
+
+       character=String.fromCharCode(keycode);
+
+       // find the object for the destination paragraph
+       var keys_paragraph = document.getElementById('keys');
+
+       // add the character to the paragraph
+       keys_paragraph.innerHTML += character;
+    }
+    document.addEventListener("keypress",displayKey);
+   </script>
+  </body>
+</html>

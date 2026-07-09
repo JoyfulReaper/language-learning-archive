@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Radial Gradient on Two Different Elements</title>
+    <style>
+      .container {
+        width: 45rem;
+        margin: 0 auto;
+      }
+      .grad { background-image: radial-gradient(
+        orange,
+        white);
+        border: solid 1px black;
+        margin: 1rem;
+        float: left; 
+      }
+      .one {
+        width: 30rem;
+        height: 30rem;
+      }
+      .two {
+        width: 10rem;
+        height: 30rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grad one"></div>
+      <div class="grad two"></div>
+    </div>
+  </body>
+</html>

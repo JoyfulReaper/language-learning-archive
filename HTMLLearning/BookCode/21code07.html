@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Text in JavaScript</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1 id="heading1">Dynamic Text in JavaScript</h1>
+    <p>Using the W3C DOM, you can dynamically change the 
+    heading at the top of this page.</p>
+    <p>Enter a new title and click the Change! button. </p>
+    
+    <form name="changeform">
+    <input name="newtitle" size="40">
+    <button type="button" onclick="changeTitle();">Change!</button>
+    </form>
+    <script>
+      function changeTitle() {
+        if (!document.getElementById) return;
+        var newtitle = document.changeform.newtitle.value;
+        var heading1 = document.getElementById("heading1");
+        heading1.firstChild.nodeValue=newtitle;
+      }
+    </script>
+  </body>
+</html>

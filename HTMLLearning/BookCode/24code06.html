@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Moving and Resizing Windows</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+
+   <h1>Moving and Resizing Windows</h1>
+
+    <form name="changeform">
+      <p>
+        <strong>Resize to:</strong> <br>
+        <input size="5" type="text" name="w"> pixels wide and    
+        <input size="5" type="text" name="h"> pixels high 
+      </p>
+      <p><strong>-- AND/OR --</strong></p>
+      <p>
+        <strong>Move to:</strong> <br> 
+        X-position: <input size="5" type="text" name="x">  
+        Y-position: <input size="5" type="text" name="y"> 
+      </p>
+      <p><input type="button" value="Change Window" id="doIt"></p>
+   </form>
+
+    <script>
+      function doIt() {
+        if ((document.changeform.w.value) && 
+           (document.changeform.h.value)) {
+          NewWin.resizeTo(document.changeform.w.value, 
+          document.changeform.h.value);
+        }
+        if ((document.changeform.x.value) && 
+           (document.changeform.y.value)) {
+          NewWin.moveTo(document.changeform.x.value, 
+          document.changeform.y.value);
+        }
+      }
+      
+      window.addEventListener("load", function() {
+        NewWin=window.open('','NewWin', 'width=200,height=100');
+      });
+      
+      document.getElementById("doIt").addEventListener("click", doIt); 
+   </script>
+ </body>
+</html>

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* reset styles here */
+
+/* standard colors */ 
+body { background-color: #fff; color: #000; }
+h1, h2 { color: #fbd91f;  /* yellow */ }
+h3, h4, h5 { color: #000; }
+
+/* standard fonts */ 
+h1, h2, h3 {
+  font-family: Baskerville, "Times New Roman", serif;
+}
+h1 {
+  text-shadow:2px 3px 3px #000000;
+  margin-bottom: 0.5em;
+}
+h2 {
+  text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+  margin-bottom: 0.5em;
+}
+
+/* background image on the header */ 
+header {
+  width: 100%;
+  padding: 0.5em 0 3em 0.25em;
+  background-image: url(images/dandy-header-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 100%;
+}

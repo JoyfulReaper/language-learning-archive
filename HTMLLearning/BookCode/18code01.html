@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Page with Two Breakpoints</title>
+    <style>
+      body { 
+        color: blue; 
+        font-family: "Handwriting - Dakota", Papyrus;
+      }
+      @media all and (min-width:480px) and (max-width:1200px){
+        body { color: red; }
+      }
+      @media screen and (min-width:1201px){
+        body { color: green; }
+      }
+    </style>
+    <meta name="viewport" 
+          content="width=device-width,initial-scale=1">
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Etiam id purus nec eros semper luctus. Proin nisl lectus, 
+    ullamcorper ultrices leo in, tristique rutrum risus. Morbi 
+    congue diam tempor lorem semper, congue tempor turpis pretium. 
+    Nunc eget dui ut lorem auctor ornare. Vivamus lectus purus, 
+    vehicula eu velit eu, iaculis ultrices dui. Aliquam consectetur 
+    risus non ligula blandit, et gravida lectus bibendum. Etiam 
+    laoreet luctus nibh. Nulla sit amet lorem quis arcu accumsan 
+    mollis.</p>
+  </body>
+</html>

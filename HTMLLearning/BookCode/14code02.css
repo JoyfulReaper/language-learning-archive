@@ -1,0 +1,21 @@
+div {
+  width: 50%;
+  height: 3rem;
+  background: linear-gradient(#4138f5 0%, #59c4e4 100%);
+  padding: 1rem;
+  color: white; 
+  margin: 0 auto;
+  text-align: center;
+}
+.two {
+  background: linear-gradient(#59c4e4 0%, #4138f5 100%);
+  transform-origin: top right;
+  transform: skew(15deg);
+}
+.three {
+  transform-origin: bottom right;
+  transform: skew(345deg);
+}
+.four {
+  background: linear-gradient(#59c4e4 0%, #4138f5 100%);
+}

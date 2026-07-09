@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>McKinley Has a Lot to Say</title>
+    <style>
+      canvas {
+        transform: scale(0.5) translateY(-600px);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1262" height="1209"></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var context = canvas.getContext('2d');
+      var mckinleyImage = new Image(); 
+      mckinleyImage.src = "images/mckinley-talking-sprite.jpg";
+    
+      var width = 1262;
+      var height = 1209;
+      
+      var frames = 1;
+      var currentFrame = 0; 
+    
+      var draw = function() {
+        context.clearRect(0, 0, width, height);
+        context.drawImage(
+          mckinleyImage,
+          width * currentFrame,
+          0,
+          width,height,
+          0,0,
+          width,height
+        );
+        
+        if (currentFrame == frames) {
+          currentFrame = 0; 
+        } else {
+          currentFrame++;
+        }
+      }; 
+    
+      setInterval(draw, 200);
+    </script>
+  </body>
+</html>

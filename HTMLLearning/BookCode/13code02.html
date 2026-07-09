@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning the Difference Between background-attachment 
+           Values</title>
+    <style>
+  div {
+    height: 300px;
+    width: 60%;
+    max-width: 500px;
+    margin: 1rem auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .scroll, .fixed, .local { 
+    background-image: url('http://lorempixel.com/600/400/nature/');
+  }
+  .scroll {
+    background-attachment: scroll;
+  }
+  .fixed {
+    background-attachment: fixed;
+  }
+  .local {
+    background-attachment: local;
+  }
+  .inner { width: 100%; height: 600px; overflow-y: hidden; }
+  .addscrollbar { margin-bottom: 50rem; }
+    </style>
+  </head>
+  <body>
+    <div class="scroll">
+      <div class="inner"><h1>scroll</h1></div>
+    </div>
+    <div class="fixed">
+      <div class="inner"><h1>fixed</h1></div>
+    </div>
+    <div class="local">
+      <div class="inner"><h1>local</h1></div>
+    </div>
+    <p class="addscrollbar"></p>
+  </body>
+</html>

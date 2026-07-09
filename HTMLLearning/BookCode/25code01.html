@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Browser Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Browser Information</h1>
+    <p>
+      The <strong>navigator</strong> object contains the 
+      following information about the browser you are using:
+    </p>
+    <ul id="info"></ul>
+    
+    <script>
+    var txt = "";
+    txt += "<li><strong>Code Name:</strong> " + navigator.appCodeName;
+    txt += "<li><strong>App Name:</strong> " + navigator.appName;
+    txt += "<li><strong>App Version:</strong> " + navigator.appVersion;
+    txt += "<li><strong>User Agent:</strong> " + navigator.userAgent;
+    txt += "<li><strong>Language:</strong> " + navigator.language;
+    txt += "<li><strong>Platform:</strong> " + navigator.platform;
+    
+    document.getElementById("info").innerHTML = txt; 
+    </script>
+  </body>
+</html>

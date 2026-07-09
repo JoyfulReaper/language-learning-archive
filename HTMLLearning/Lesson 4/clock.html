@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Displaying Times and Dates</title>
+        <style>
+            body, html {
+                background-color: #786a69;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                margin: 0;
+                padding: 15px;
+            }
+            #time {
+                color: red;
+                font-size: 25px;
+            }
+            p.center {
+                text-align: center;
+            }
+            .container {
+                padding: 0;
+                margin: 0 auto;
+                width: 75%;
+                background-color: white;
+                height: 100vh;
+                box-shadow: -10px 0 8px -8px black, 10px 0 8px -8px black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1>Current Date and Time:</h1>
+            <p class="center">
+                <strong><span id="time"></span></spane></strong>
+            </p>
+            </div>
+    </body>
+    <script>
+        setInterval(() => {
+            const time = new Date();
+            const hour = time.getHours();
+            const minute = String(time.getMinutes()).padStart(2, '0');
+            const seconds = String(time.getSeconds()).padStart(2, '0');
+            document.getElementById("time").innerHTML = `${hour}:${minute}:${seconds}`;
+        }, 1000)
+    </script>
+</html>
